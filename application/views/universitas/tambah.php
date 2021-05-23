@@ -53,23 +53,22 @@
 
 						?>
 							<td>
-								<input type="radio" name="nilai[<?php echo $dataItem->kdKriteria ?>]" value="<?php echo $dataItem->value ?>" <?php
-																																				if (isset($nilaiUniversitas)) {
-																																					foreach ($nilaiUniversitas as $item => $value) {
-																																						if ($value->kdKriteria == $dataItem->kdKriteria) {
-																																							if ($value->nilai ==  $dataItem->value) {
-																																				?> checked="checked" <?php
-																																									}
-																																								}
-																																							}
-																																						} else {
-																																							if ($no == 3) {
-																																										?> checked="checked" <?php
-																																															}
-																																														}
-																																																?> /> <?php echo $dataItem->subKriteria;
-																																																		$no++;
-																																																		?>
+								<input type="radio" name="nilai[<?php echo $dataItem->kdKriteria ?>]" id="nilai<?php echo $dataItem->kdKriteria ?>-<?php echo $dataItem->value ?>" value="<?php echo $dataItem->value ?>" <?php if (isset($nilaiUniversitas)) {
+																																																								foreach ($nilaiUniversitas as $item => $value) {
+																																																									if ($value->kdKriteria == $dataItem->kdKriteria) {
+																																																										if ($value->nilai ==  $dataItem->value) {
+																																																							?> checked="checked" <?php
+																																																												}
+																																																											}
+																																																										}
+																																																									} else {
+																																																										if ($no == 3) {
+																																																													?> checked="checked" <?php
+																																																																		}
+																																																																	}
+																																																																			?> /> <?php echo '<label class="label-kriteria" for="nilai' . $dataItem->kdKriteria . '-' . $dataItem->value . '">' . $dataItem->subKriteria . "</label>";
+																																																																						$no++;
+																																																																						?>
 							</td>
 
 					<?php

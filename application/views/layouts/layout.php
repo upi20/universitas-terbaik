@@ -47,6 +47,13 @@
 			-webkit-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 0.1);
 			-moz-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 0.1);
 		}
+
+		.label-kriteria {
+			text-transform: capitalize;
+			font-weight: normal;
+			cursor: pointer;
+			padding: 10px;
+		}
 	</style>
 </head>
 
